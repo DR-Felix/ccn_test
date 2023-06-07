@@ -61,6 +61,7 @@ target_link_libraries(${PROJECT_NAME} PUBLIC ${OpenCV_LIBS})
 # Set library shared object and API header file to install
 
 add_subdirectory(example)
+
 if(WIN32)
     set(OpenCV_RUNTIME_PATH "${OpenCV_DIR}/../../bin")
 else()
@@ -70,54 +71,6 @@ endif()
 install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
         DESTINATION ${CMAKE_INSTALL_LIBDIR}
         FILES_MATCHING PATTERN "*opencv_core*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*highgui*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*imgcodecs*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*imgproc*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*videoio*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*zlib*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*jpeg*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*libwebpdecoder*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*libwebp*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*libpng*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*libsharpyuv*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*tiff*"
-        )
-install(DIRECTORY "${OpenCV_RUNTIME_PATH}/"
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        FILES_MATCHING PATTERN "*liblzma*"
         )
 
 install(

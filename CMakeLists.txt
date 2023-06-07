@@ -12,5 +12,5 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET ccn_test PROPERTY CXX_STANDARD 20)
 endif()
 
-add_subdirectory(ccn)
+add_subdirectory(CCN/prj.cw)
 target_link_libraries(ccn_test ccn)
